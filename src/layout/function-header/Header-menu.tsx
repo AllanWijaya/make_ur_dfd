@@ -221,3 +221,18 @@ export function SelectNone({ constructRef }: ConsProps) {
     constructRef.current?.pages[constructRef.current.currentPageIndex];
   graph?.clearSelection();
 }
+export function ResetView({ constructRef }: ConsProps) {
+  const graph =
+    constructRef.current?.pages[constructRef.current.currentPageIndex];
+  graph?.zoomActual();
+}
+export function ZoomIn({ constructRef }: ConsProps) {
+  const graph =
+    constructRef.current?.pages[constructRef.current.currentPageIndex];
+  graph?.zoomIn();
+}
+export function ZoomOut({ constructRef }: ConsProps) {
+  const graph =
+    constructRef.current?.pages[constructRef.current.currentPageIndex];
+  graph?.zoomOut();
+}

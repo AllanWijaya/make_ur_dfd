@@ -916,7 +916,7 @@ export class Construct {
 
     graphh.addListener("doubleClick", (_sender: null, evt: EventObject) => {
       const cell = evt.getProperty("cell");
-      console.log(cell);
+      // console.log(cell);
       changeValue(cell);
     });
 

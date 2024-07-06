@@ -9,10 +9,13 @@ import {
   Paste,
   Print,
   Redo,
+  ResetView,
   SaveAs,
   SelectAll,
   SelectNone,
   Undo,
+  ZoomIn,
+  ZoomOut,
 } from "./function-header/Header-menu";
 import { ChangeEvent, RefObject, createRef, useState } from "react";
 // import { Notation } from "./function-leftbar/notation";
@@ -366,6 +369,9 @@ function Header({ OnFilename, filename, constructRef }: HeaderProps) {
                       <a
                         className="dropdown-item d-flex justify-content-between"
                         href="#"
+                        onClick={() => {
+                          ResetView({ constructRef });
+                        }}
                       >
                         {t("reset")}
                         <p className="text-secondary text-sm">Home</p>
@@ -375,6 +381,9 @@ function Header({ OnFilename, filename, constructRef }: HeaderProps) {
                       <a
                         className="dropdown-item d-flex justify-content-between"
                         href="#"
+                        onClick={() => {
+                          ZoomIn({ constructRef });
+                        }}
                       >
                         {t("zoomin")}
                         <p className="text-secondary text-sm">
@@ -386,6 +395,9 @@ function Header({ OnFilename, filename, constructRef }: HeaderProps) {
                       <a
                         className="dropdown-item d-flex justify-content-between"
                         href="#"
+                        onClick={() => {
+                          ZoomOut({ constructRef });
+                        }}
                       >
                         {t("zoomout")}
                         <p className="text-secondary text-sm">
