@@ -11,7 +11,7 @@ import { Construct } from "./construct";
 import "@maxgraph/core/css/common.css";
 
 export default function Main() {
-  const [filename, setFilename] = useState("");
+  const [filename, setFilename] = useState("diagram");
   function handleFilename(filename: string) {
     setFilename(filename);
   }
