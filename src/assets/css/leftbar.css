@@ -1,0 +1,15 @@
+.menu-diagram{
+    left: 0;
+    top: 66px;
+    width: 200px;
+    overflow: hidden;
+    position: absolute;
+   
+    min-height: 625px;
+    z-index: 2;
+}
+.convert-symbol{
+    display: flex;
+    flex-direction: column;
+    
+}
