@@ -30,7 +30,7 @@ interface HeaderProps {
   constructRef: RefObject<Construct>;
 }
 function Header({ OnFilename, filename, constructRef }: HeaderProps) {
-  const [namefile, setNamefile] = useState("");
+  const [namefile, setNamefile] = useState("diagram");
 
   //Open Logic Start
   const fileInputRef: RefObject<HTMLInputElement> = createRef();
