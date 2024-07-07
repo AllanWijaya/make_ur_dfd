@@ -3,26 +3,19 @@ from flair.data import Sentence
 from flair.nn import Classifier
 from fastapi import FastAPI
 
-import flair.datasets
 
-from flair.trainers import ModelTrainer
-from flair.models import SequenceTagger
-from flair.embeddings import TokenEmbeddings, WordEmbeddings, StackedEmbeddings
-from typing import List
-
-corpus = flair.datasets.UD_INDONESIAN()
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://make-ur-dfd.vercel.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 @app.get("/")
-def read_root():
-    return 
+async def read_root():
+    return {"hello":"world"}
 
 
 @app.post("/get_text/{text}")
