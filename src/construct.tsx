@@ -572,7 +572,7 @@ export class Construct {
             if (cell.edge == true) {
               if (t("lang") == "English") {
                 axios
-                  .post("https://make-ur-dfd.vercel.app/get_text/" + text)
+                  .post("34.101.80.4:8000/get_text/" + text)
                   .then((response) => {
                     const data = response.data;
                     if (data?.notif) {
@@ -587,12 +587,12 @@ export class Construct {
                       graph.removeCellOverlay(cell, null);
                     }
                   })
-                  .catch((error) => {
-                    console.error(error);
+                  .catch(() => {
+                    console.error("error");
                   });
               } else {
                 axios
-                  .post("https://make-ur-dfd.vercel.app/cek_kata/" + text)
+                  .post("34.101.80.4:8000/cek_kata/" + text)
                   .then((response) => {
                     const data = response.data;
                     if (data?.notif) {
@@ -607,8 +607,8 @@ export class Construct {
                       graph.removeCellOverlay(cell, null);
                     }
                   })
-                  .catch((error) => {
-                    console.error(error);
+                  .catch(() => {
+                    console.error("error");
                   });
               }
             }
