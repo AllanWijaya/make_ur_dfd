@@ -572,7 +572,7 @@ export class Construct {
             if (cell.edge == true) {
               if (t("lang") == "English") {
                 axios
-                  .post("https://34.101.80.4:8000/get_text/" + text)
+                  .post("http://34.101.80.4:8000/get_text/" + text)
                   .then((response) => {
                     const data = response.data;
                     if (data?.notif) {
@@ -592,7 +592,7 @@ export class Construct {
                   });
               } else {
                 axios
-                  .post("https://34.101.80.4:8000/cek_kata/" + text)
+                  .post("http://34.101.80.4:8000/cek_kata/" + text)
                   .then((response) => {
                     const data = response.data;
                     if (data?.notif) {
