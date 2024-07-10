@@ -569,11 +569,11 @@ export class Construct {
           const text = newValue;
           if (cell.edge) {
             if (cell.edge == true) {
-              const url = "";
+              const url = "https://34.101.246.67:8000";
               axios;
               if (t("lang") == "English") {
                 axios
-                  .post("https://34.101.246.67:8000/get_text/" + text)
+                  .post(url + "/get_text/" + text)
                   .then((response) => {
                     const data = response.data;
                     if (data?.notif) {
