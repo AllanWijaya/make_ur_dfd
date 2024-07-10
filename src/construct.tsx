@@ -562,7 +562,6 @@ export class Construct {
       if (cell) {
         const value = cell.value;
         const newValue = prompt("enter a new value", value);
-
         if (newValue) {
           graph.batchUpdate(() => {
             graph.model.setValue(cell, newValue);
@@ -570,9 +569,11 @@ export class Construct {
           const text = newValue;
           if (cell.edge) {
             if (cell.edge == true) {
+              const url = "";
+              axios;
               if (t("lang") == "English") {
                 axios
-                  .post("http://34.101.80.4:8000/get_text/" + text)
+                  .post("https://34.101.246.67:8000/get_text/" + text)
                   .then((response) => {
                     const data = response.data;
                     if (data?.notif) {
@@ -592,7 +593,7 @@ export class Construct {
                   });
               } else {
                 axios
-                  .post("http://34.101.80.4:8000/cek_kata/" + text)
+                  .post(url + "/cek_kata/" + text)
                   .then((response) => {
                     const data = response.data;
                     if (data?.notif) {
