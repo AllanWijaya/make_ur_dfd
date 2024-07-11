@@ -569,7 +569,7 @@ export class Construct {
           const text = newValue;
           if (cell.edge) {
             if (cell.edge == true) {
-              const url = "http://34.101.246.67:8000";
+              const url = "https://makeurdfd.frosya-id.com";
               axios;
               if (t("lang") == "English") {
                 axios
@@ -864,9 +864,10 @@ export class Construct {
           const text = newValue;
           if (cell.edge) {
             if (cell.edge == true) {
+              const url = "https://makeurdfd.frosya-id.com"
               if (t("lang") == "English") {
                 axios
-                  .post("https://make-ur-dfd.vercel.app/get_text/" + text)
+                  .post(url+"/get_text/" + text)
                   .then((response) => {
                     const data = response.data;
                     if (data?.notif) {
@@ -886,7 +887,7 @@ export class Construct {
                   });
               } else {
                 axios
-                  .post("https://make-ur-dfd.vercel.app/cek_kata/" + text)
+                  .post(url+"/cek_kata/" + text)
                   .then((response) => {
                     const data = response.data;
                     if (data?.notif) {
