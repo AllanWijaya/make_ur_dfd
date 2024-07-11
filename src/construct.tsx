@@ -569,7 +569,7 @@ export class Construct {
           const text = newValue;
           if (cell.edge) {
             if (cell.edge == true) {
-              const url = "https://34.101.246.67:8000";
+              const url = "http://34.101.246.67:8000";
               axios;
               if (t("lang") == "English") {
                 axios
